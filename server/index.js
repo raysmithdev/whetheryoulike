@@ -5,7 +5,7 @@ const app = express();
 
 // API endpoints go here!
 
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
     return res.json({response: 'api/test reached'})
 })
 
