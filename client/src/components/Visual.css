@@ -1,0 +1,62 @@
+.sunnyIcon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: yellow;
+}
+
+.partlyCloudyIcon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    color: rgb(208, 203, 160)
+}
+
+.rainIcon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: darkblue;
+}
+
+.nightIcon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: blue;
+}
+
+.small-nightIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: blue;
+}
+
+.cloudIcon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    color: gray;
+}
+
+.visual {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}

@@ -1,0 +1,17 @@
+
+.menu-container {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  right: 0;
+  z-index: 500;
+  color: grey;
+  mix-blend-mode: difference;
+}
+
+.menu-icon {
+  color: grey;
+    mix-blend-mode: difference;
+    height: 50px; 
+    width: 50px;
+}

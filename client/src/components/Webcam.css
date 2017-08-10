@@ -1,0 +1,22 @@
+.webcam {
+    position: absolute;
+    top: 0;
+    height: 90vw;
+    width: 100vw;
+    z-index: 2;
+}
+
+.webcam-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.webcam > p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: grey;
+}

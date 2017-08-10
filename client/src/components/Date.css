@@ -1,0 +1,9 @@
+.date {
+    position: absolute;
+    height: 30px;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+    font-size: 25px;
+    color: rgba(135,206,250, 1);
+    z-index: 99;
+}
