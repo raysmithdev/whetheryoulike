@@ -88,7 +88,7 @@ class YourWhether extends Component {
     }
 
     savePositions() {
-        return fetch('/saveSettings', {
+        return fetch('/api/saveSettings', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

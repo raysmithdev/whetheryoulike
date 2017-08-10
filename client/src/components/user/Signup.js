@@ -21,7 +21,7 @@ class SignUp extends Component {
     }
 
     createNewUser(email, password) {
-        return fetch('/signup', {
+        return fetch('/api/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': "application/json"

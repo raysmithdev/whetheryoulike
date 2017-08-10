@@ -57,7 +57,7 @@ var myHasher = function (password, tempUserData, insertTempUser, callback) {
 function setUpNev() {
 
   nev.configure({
-    verificationURL: 'http://localhost:8080/email-verification/${URL}',
+    verificationURL: 'https://rocky-escarpment-61736.herokuapp.com/api/email-verification/${URL}',
     URLLength: 48,
 
     // mongo-stuff
@@ -88,7 +88,7 @@ function setUpNev() {
     confirmMailOptions: {
       from: 'Do Not Reply <phoebusapollotest@gmail.com>',
       subject: 'Successfully verified!',
-      html: '<p>Your account has been successfully verified. If you haven\'t already, you may <a href="http://localhost:3000/login">log in here.</a></p>',
+      html: '<p>Your account has been successfully verified. If you haven\'t already, you may <a href="https://rocky-escarpment-61736.herokuapp.com/api/login">log in here.</a></p>',
       text: 'Your account has been successfully verified.'
     },
 

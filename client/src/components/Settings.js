@@ -106,7 +106,7 @@ class Settings extends Component {
 
 
     saveSettings() {
-        return fetch('/saveSettings', {
+        return fetch('/api/saveSettings', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

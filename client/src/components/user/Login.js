@@ -24,7 +24,7 @@ class Login extends Component {
 
     logIn(email, password) {
         console.log(email, password)
-        return fetch('/login', {
+        return fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
