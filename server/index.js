@@ -5,6 +5,9 @@ const app = express();
 
 // API endpoints go here!
 
+app.get('/test', (req, res) => {
+    return res.json({response: 'api/test reached'})
+})
 
 // Serve the built client
 app.use(express.static(path.resolve(__dirname, '../client/build')));
