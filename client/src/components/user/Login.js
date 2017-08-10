@@ -91,6 +91,7 @@ class Login extends Component {
                         <div className="message">{this.state.msg}</div>
                         <button className="login-button" type="Submit" value="Submit">Submit</button>
                     </form>
+                    
                     <p>Need an account? <Link to="/signup">Sign Up</Link></p>
                 </div>
             </div>
