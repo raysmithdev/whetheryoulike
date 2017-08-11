@@ -280,7 +280,7 @@ class Settings extends Component {
 
 
     getWhether(location) {
-        return fetch('http://api.wunderground.com/api/9a6893f45ddf840d/astronomy/conditions/forecast/forecast10day/hourly/hourly10day/rawtide/tide/webcams/yesterday/q/' + location + '.json')
+        return fetch('https://api.wunderground.com/api/9a6893f45ddf840d/astronomy/conditions/forecast/forecast10day/hourly/hourly10day/rawtide/tide/webcams/yesterday/q/' + location + '.json')
             .then(response => {
                 return response.json();
             })
