@@ -53,72 +53,14 @@ class Nav extends Component {
                     onRequestClose={this.handleRequestClose}
                 >
                     <Menu>
-                        <MenuItem onTouchTap={this.handleRequestClose}><Link to="/yourwhether">Home</Link></MenuItem>
-                        <MenuItem onTouchTap={this.handleRequestClose}><Link to="/home">Preview</Link></MenuItem>
                         <MenuItem onTouchTap={this.handleRequestClose}><Link to="/settings">Settings</Link></MenuItem>
+                        <MenuItem onTouchTap={this.handleRequestClose}><Link to="/yourwhether">Change Positions</Link></MenuItem>
+                        <MenuItem onTouchTap={this.handleRequestClose}><Link to="/home">Preview</Link></MenuItem>
+                        <MenuItem onTouchTap={this.handleRequestClose}><Link to="/about">About</Link></MenuItem>
                     </Menu>
                 </Popover>
             </div>
         );
-    }
-
-
-
-
-
-
-
-    // render() {
-    //     return (
-    //         <div className="menu-container">
-    //             <TiThMenu onTouchTap={this.handleToggle} style={{color: 'black', height: '50px', width: '50px'}} />
-    //             <Drawer
-    //                 containerStyle={{opacity: '1'}}
-    //                 openSecondary={true}
-    //                 docked={false}
-    //                 width={200}
-    //                 open={this.state.open}
-    //                 onRequestChange={(open) => this.setState({ open })}
-    //             >
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/yourwhether">Home</Link></MenuItem>
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/home">Preview</Link></MenuItem>
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/settings">Settings</Link></MenuItem>
-    //             </Drawer>
-    //         </div>
-    //     );
-    // }
-
-
-
-
-    // render() {
-    //     return (
-    //         <div>
-    //             <BurgerIcon
-    //                 className="menu"
-    //                 onClick={this.handleToggle}
-    //             />
-    //             <Drawer
-    //                 style={styles.drawer}
-    //                 className="drawer"
-    //                 openSecondary={true}
-    //                 docked={false}
-    //                 width={200}
-    //                 open={this.state.open}
-    //                 onRequestChange={(open) => this.setState({ open })}
-    //             >
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/yourwhether">Home</Link></MenuItem>
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/home">Preview</Link></MenuItem>
-    //                 <MenuItem onTouchTap={this.handleClose}><Link to="/settings">Settings</Link></MenuItem>
-    //             </Drawer>
-    //         </div>
-    //     )
-    // }
-}
-
-const styles = {
-    drawer: {
-        backgroundColor: 'pink'
     }
 }
 

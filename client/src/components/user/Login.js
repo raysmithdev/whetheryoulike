@@ -93,6 +93,7 @@ class Login extends Component {
                     </form>
                     
                     <p>Need an account? <Link to="/signup">Sign Up</Link></p>
+                    <p><Link to="/about">About WhetherYouLike</Link></p>
                 </div>
             </div>
         )

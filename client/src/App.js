@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Signup from './components/user/Signup';
 import Login from './components/user/Login';
 import EmailVerification from './components/user/EmailVerification';
+import About from './About';
 import Settings from './components/Settings';
 import Nav from './components/Nav';
 import YourWhether from './components/YourWhether';
@@ -42,6 +43,7 @@ class App extends Component {
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/email-verification" exact component={EmailVerification} />
+            <Route path="/about" exact component={About} />
             <Route path="/yourwhether" exact render={() => (
               this.props.isLoggedIn ? <YourWhether /> :
                 <Redirect to="/login" />

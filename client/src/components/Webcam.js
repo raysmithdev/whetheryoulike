@@ -9,10 +9,6 @@ import * as actions from '../actions/index';
 
 class Webcam extends Component {
 
-    componentDidMount() {
-        const height = window.innerHeight;
-    }
-
     dragStopHandler(e) {
         console.log(e.target.parentNode);
         const splitStyle = e.target.parentNode.style.transform.split(",")
