@@ -53,7 +53,7 @@ class WebcamList extends Component {
         return (
             <div className="chooseCam-container">
                 <div className="preview-container">
-                    <p>If image does is broken, the webcam is either down or we don't have permission</p>
+                    <p>If image is broken, the webcam is either down or we don't have permission</p>
                     <img className="camPreview" alt="cam preview" src={this.props.cam ? this.props.cam.CURRENTIMAGEURL : null} />
                 </div>
                 <RadioButtonGroup
