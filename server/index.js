@@ -4,7 +4,6 @@ const express = require('express');
 const passport = require('passport');
 const session = require('express-session');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 mongoose.Promise = global.Promise;
 const cookieParser = require('cookie-parser');
@@ -19,7 +18,6 @@ const app = express();
 
 require('./config/passport')(passport)
 
-app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
