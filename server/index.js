@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo')(session);
 mongoose.Promise = global.Promise;
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const { PORT, DATABASE_URL, TEST_DATABASE_URL } = require('./config/database.js');
+const { DATABASE_URL, TEST_DATABASE_URL } = require('./config/database.js');
 const nev = require('email-verification')(mongoose);
 const User = require('./routes/models/user');
 const nodemailer = require('nodemailer');
@@ -131,15 +131,15 @@ app.get(/^(?!\/api(\/|$))/, (req, res) => {
 });
 
 let server;
-function runServer(database = DATABASE_URL, port = PORT) {
+function runServer(port = 3001, database = DATABASE_URL) {
   return new Promise((resolve, reject) => {
     mongoose.connect(database, err => {
       if (err) {
         return reject(err);
       }
       setUpNev();
-      server = app.listen(PORT, () => {
-        console.log(`Your app is listening on port ${PORT}`);
+      server = app.listen(port, () => {
+        console.log(`Your app is listening on port ${port}`);
         resolve();
       })
         .on('error', err => {

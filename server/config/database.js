@@ -4,4 +4,3 @@ exports.DATABASE_URL = process.env.DATABASE_URL ||
 exports.TEST_DATABASE_URL = (
 	process.env.TEST_DATABASE_URL ||
 	'mongodb://mmarovich:12345@ds147842.mlab.com:47842/test-whether');
-exports.PORT = process.env.PORT || 8080;
