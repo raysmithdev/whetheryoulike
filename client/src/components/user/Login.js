@@ -24,7 +24,7 @@ class Login extends Component {
 
     logIn(email, password) {
         console.log(email, password)
-        return fetch('/api/login', {
+        return fetch('https://rocky-escarpment-61736.herokuapp.com/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
