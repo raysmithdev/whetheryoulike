@@ -45,7 +45,7 @@ class YourWhether extends Component {
     }
 
     getWhetherHome(location) {
-        return fetch('http://api.wunderground.com/api/9a6893f45ddf840d/alerts/almanac/astronomy/conditions/currenthurricane/forecast/forecast10day/hourly/hourly10day/rawtide/tide/webcams/yesterday/q/' + location + '.json')
+        return fetch('https://api.wunderground.com/api/9a6893f45ddf840d/alerts/almanac/astronomy/conditions/currenthurricane/forecast/forecast10day/hourly/hourly10day/rawtide/tide/webcams/yesterday/q/' + location + '.json')
             .then(response => response.json())
             .then(data => {
                 return store.dispatch(actions.whetherUpdate(data));
