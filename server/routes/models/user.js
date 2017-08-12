@@ -5,6 +5,10 @@ var bcrypt = require('bcrypt-nodejs');
 var userSchema = mongoose.Schema({
     username: String,
     email: String,
+    // for sendgrid
+    authToken: { type: String, required:true, unique:true },
+    isAuthenticated: { type: Boolean, required:true },
+    //
     password: String,
     settings: Object,
     facebook: {
