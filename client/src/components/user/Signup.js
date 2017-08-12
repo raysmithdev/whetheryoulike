@@ -96,8 +96,8 @@ class SignUp extends Component {
 
     onSubmit(e) {
         e.preventDefault();
-        const email = this.email.value;
-        const password = this.password.value;
+        const email = this.state.email;
+        const password = this.state.password;
         this.createNewUser(email, password);
     }
 
