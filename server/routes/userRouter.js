@@ -62,7 +62,7 @@ module.exports = function (app, passport, nev) {
                     console.log(info)
                     if (err) {
                         console.error(err);
-                        return res.status(500).send('ERROR: sending verification email FAILED');
+                        return res.status(500).send(`ERROR: sending verification email FAILED ${err}`);
                     }
                     res.json({
                         email: info.accepted[0],
