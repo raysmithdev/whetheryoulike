@@ -4,7 +4,7 @@ const transportOptions = {
     service: 'Gmail',
     auth: {
         user: 'phoebusapollotest@gmail.com',
-        pass: 'Sup3rS3cr3t'
+        pass: 'Sup3rSecr3t'
     }
 }
 
@@ -15,7 +15,7 @@ const smtpTransport = nodemailer.createTransport({
         port: 587,
         auth: {
             user: 'phoebusapollotest@gmail.com',
-            pass: 'Sup3rS3cr3t'
+            pass: 'Sup3rSecr3t'
         }
     }
 });
