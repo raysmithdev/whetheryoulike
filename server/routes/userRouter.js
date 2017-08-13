@@ -14,6 +14,8 @@ module.exports = function (app, passport, nev) {
         res.status(200).send() // load the index.ejs file
     });
 
+    // test push comment
+
 
     app.get('/api/email-verification/:URL', function (req, res) {
         console.log("Email VERIFICATION route")
