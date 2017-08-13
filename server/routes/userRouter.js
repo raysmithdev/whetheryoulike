@@ -16,22 +16,8 @@ module.exports = function (app, passport, nev) {
         res.status(200).send() // load the index.ejs file
     });
 
-<<<<<<< HEAD
-    // test push comment
+    //test comment
 
-
-    app.get('/api/email-verification/:URL', function (req, res) {
-        console.log("Email VERIFICATION route")
-        var url = req.params.URL;
-
-        nev.confirmTempUser(url, function (err, user) {
-            if (user) {
-                nev.sendConfirmationEmail(user.email, function (err, info) {
-                    if (err) {
-                        return res.status(404).send('ERROR: sending confirmation email FAILED');
-                    }
-                    res.send('Your email has been confirmed! Thank you! <a href="http://localhost:3000/login">Click here to log in!</a>')
-=======
     app.get('/api/email-verification', function (req, res) {
         console.log('verify_email token: ', req.query.token);
 
@@ -53,7 +39,6 @@ module.exports = function (app, passport, nev) {
                 }, function (err, json) {
                     if (err) { return console.error(err); }
                     console.log(json);
->>>>>>> 63db65827eb3c2244e32dc475c032b4ade486dab
                 });
 
                 res.send(user);
