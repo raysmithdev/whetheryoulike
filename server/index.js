@@ -54,7 +54,7 @@ var myHasher = function (password, tempUserData, insertTempUser, callback) {
 function setUpNev() {
 
   nev.configure({
-    verificationURL: 'https://rocky-escarpment-61736.herokuapp.com/api/email-verification/${URL}',
+    verificationURL: 'https://rocky-escarpment-61736.herokuapp.com/email-verification/${URL}',
     URLLength: 48,
 
     // mongo-stuff
