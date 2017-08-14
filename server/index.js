@@ -54,7 +54,7 @@ var myHasher = function (password, tempUserData, insertTempUser, callback) {
 function setUpNev() {
 
   nev.configure({
-    verificationURL: 'https://rocky-escarpment-61736.herokuapp.com/api/email-verification/${URL}',
+    verificationURL: 'https://sheltered-beach-39433.herokuapp.com/api/email-verification/${URL}',
     URLLength: 48,
 
     // mongo-stuff
@@ -148,6 +148,7 @@ app.get('/api/email-verification/:URL', function (req, res) {
     }
   });
 });
+
 
 let server;
 function runServer(port = 3001, database = DATABASE_URL) {
