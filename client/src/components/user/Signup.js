@@ -33,6 +33,7 @@ class SignUp extends Component {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data)
                 if (data.msg) {
                     this.setState({ msg: data.msg })
                     return data;
@@ -42,6 +43,7 @@ class SignUp extends Component {
                 }
             })
             .then(data => {
+                console.log(data)
                 if (!data.msg) {
                     this.props.history.push('/email-verification')
                 } else {
