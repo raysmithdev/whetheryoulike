@@ -44,7 +44,6 @@ class App extends Component {
             <Route path="/login" exact component={Login} />
             <Route path="/email-verification" exact component={EmailVerification} />
             <Route path="/about" exact component={About} />
-            <Route path="/api/email-verification/:URL" exact component={About} />
             <Route path="/yourwhether" exact render={() => (
               this.props.isLoggedIn ? <YourWhether /> :
                 <Redirect to="/login" />
