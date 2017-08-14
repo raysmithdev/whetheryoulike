@@ -41,7 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/api/test', (req, res) => {
-    res.send('Hello world');
+  res.send('Hello world');
 })
 
 //////////////// nev
@@ -78,7 +78,7 @@ function setUpNev() {
       from: 'Do Not Reply <phoebusapollotest@gmail.com>',
       subject: 'Confirm your account',
       html: '<p>Please verify your account within 24 hours by clicking <a href="${URL}">this link</a>. If you are unable to do so, copy and ' +
-                'paste the following link into your browser:</p><p>${URL}</p>',
+      'paste the following link into your browser:</p><p>${URL}</p>',
       text: 'Please verify your account by clicking the following link, or by copying and pasting it into your browser: ${URL}'
     },
     shouldSendConfirmation: true,
@@ -109,7 +109,7 @@ function setUpNev() {
       console.log(err);
       return;
     }
-    
+
     console.log('generated temp user model: ' + (typeof tempUserModel === 'function'));
   });
 
@@ -126,8 +126,27 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 // Unhandled requests which aren't for the API should serve index.html so
 // client-side routing using browserHistory can function
 app.get(/^(?!\/api(\/|$))/, (req, res) => {
-    const index = path.resolve(__dirname, '../client/build', 'index.html');
-    res.sendFile(index);
+  const index = path.resolve(__dirname, '../client/build', 'index.html');
+  res.sendFile(index);
+});
+
+app.get('/api/email-verification/:URL', function (req, res) {
+  console.log("Email VERIFICATION route")
+  console.log(req.params)
+  var url = req.params.URL;
+
+  nev.confirmTempUser(url, function (err, user) {
+    if (user) {
+      nev.sendConfirmationEmail(user.email, function (err, info) {
+        if (err) {
+          return res.status(404).send('ERROR: sending confirmation email FAILED');
+        }
+        res.send('Your email has been confirmed! Thank you! <a href="http://localhost:3000/login">Click here to log in!</a>')
+      });
+    } else {
+      return res.status(404).send('ERROR: confirming temp user FAILED');
+    }
+  });
 });
 
 let server;

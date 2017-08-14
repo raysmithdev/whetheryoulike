@@ -15,24 +15,24 @@ module.exports = function (app, passport, nev) {
     });
 
 
-    app.get('/api/email-verification/:URL', function (req, res) {
-        console.log("Email VERIFICATION route")
-        console.log(req.params)
-        var url = req.params.URL;
+    // app.get('/api/email-verification/:URL', function (req, res) {
+    //     console.log("Email VERIFICATION route")
+    //     console.log(req.params)
+    //     var url = req.params.URL;
 
-        nev.confirmTempUser(url, function (err, user) {
-            if (user) {
-                nev.sendConfirmationEmail(user.email, function (err, info) {
-                    if (err) {
-                        return res.status(404).send('ERROR: sending confirmation email FAILED');
-                    }
-                    res.send('Your email has been confirmed! Thank you! <a href="http://localhost:3000/login">Click here to log in!</a>')
-                });
-            } else {
-                return res.status(404).send('ERROR: confirming temp user FAILED');
-            }
-        });
-    });
+    //     nev.confirmTempUser(url, function (err, user) {
+    //         if (user) {
+    //             nev.sendConfirmationEmail(user.email, function (err, info) {
+    //                 if (err) {
+    //                     return res.status(404).send('ERROR: sending confirmation email FAILED');
+    //                 }
+    //                 res.send('Your email has been confirmed! Thank you! <a href="http://localhost:3000/login">Click here to log in!</a>')
+    //             });
+    //         } else {
+    //             return res.status(404).send('ERROR: confirming temp user FAILED');
+    //         }
+    //     });
+    // });
 
     app.post('/api/signup', function (req, res) {
         const username = req.body.username
