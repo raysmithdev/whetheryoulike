@@ -17,6 +17,7 @@ module.exports = function (app, passport, nev) {
 
     app.get('/api/email-verification/:URL', function (req, res) {
         console.log("Email VERIFICATION route")
+        console.log(req.params)
         var url = req.params.URL;
 
         nev.confirmTempUser(url, function (err, user) {
